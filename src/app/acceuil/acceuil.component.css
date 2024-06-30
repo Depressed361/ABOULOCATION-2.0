@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Zen+Tokyo+Zoo&display=swap');
+
+
+
+* {
+
+
+  font-family: 'Staatliches', cursive;
+
+
+}
+
+body {
+  padding-top: 0px;
+  margin: 0 0 0 0;
+
+  position: relative;
+  width: 100%;
+
+}
+
+.section-brand {  background-image: url('../../assets/image-acceuil/bmw.png');
+  position: relative;
+  margin-top: 0%;
+  padding-top: 0%;
+ /* height: 70vh;*/
+ height: 70vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;}
+
+  .section-brand div {
+    position: absolute;
+    bottom: 0;
+    /*left: 0;*/
+    margin-left: 20px;
+    /* autres styles */
+  }
+
+
+.section-brand h1 {
+  padding: 0 10px;
+  font-size: 50px;
+  margin-top: 0%;
+
+}
+

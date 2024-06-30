@@ -1,0 +1,17 @@
+<form [formGroup]="sheduleLocationForm" (ngSubmit)="onsubmit()">
+  <label for="dateDebut">Start Date:</label>
+  <input type="date" id="dateDebut" formControlName="dateDebut" />
+
+  <label for="heureDebut">Start Time:</label>
+  <input type="time" id="heureDebut" formControlName="heureDebut" />
+
+
+  <label for="dateFin">End Date:</label>
+  <input type="date" id="dateFin" formControlName="dateFin"  />
+
+  <label for="heureFin">End Time:</label>
+  <input type="time" id="heureFin" formControlName="heureFin" />
+
+
+  <button type="submit" (click)="onsubmit()">Submit</button>
+

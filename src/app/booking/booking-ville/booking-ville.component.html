@@ -1,0 +1,14 @@
+<div class="booking-ville">
+<h1>Choisissez la Ville</h1>
+
+<div *ngFor="let ville of villes" class="card horizontal" >
+ <div class="card-image">
+<img [src]="ville.image" alt="Card image cap"/>
+</div>
+  <div class="card-body">
+    <h5 class="card-title">{{ville.name}}</h5>
+
+    <a (click)="gotoSheduleLocation(ville)" class="btn btn-primary" c>CHOISIR</a>
+  </div>
+</div>
+</div>

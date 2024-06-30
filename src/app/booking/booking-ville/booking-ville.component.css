@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+.booking-ville {
+  position: relative;
+  ;
+
+  font-family: 'Staatliches', cursive;
+}
+.CardStyle {
+  width: 18rem;
+}
+
+.btn  {
+  background-color: #7200fd;
+  border-color: #7200fd;
+  font-family: 'Staatliches', cursive;
+
+}
+
+.btn:hover {
+  background-color: #fefdff;
+  border-color: #7200fd;
+  font-family: 'Staatliches', cursive;
+}
+
+@media screen and (max-width: 900px)
+{
+  .booking-ville {
+    position: relative;
+
+    font-family: 'Staatliches', cursive;
+  }
+
+  .btn  {
+    background-color: #7200fd;
+    border-color: #7200fd;
+    font-family: 'Staatliches', cursive;
+  }
+  .btn:hover {
+    background-color: #fefdff;
+    border-color: #7200fd;
+    font-family: 'Staatliches', cursive;
+  }
+
+}

@@ -1,0 +1,26 @@
+.body {
+  background-color: #aaadb0;
+}
+
+.card {
+border-color: #7200fd ;
+transition: transform 0.3s ease ;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius: 2%;
+
+
+}
+
+.card-body{
+
+  font-family:'Staatliches', cursive;
+}
+.card:hover {
+transform: scale(1.05);
+
+}
+.btn-primary {
+  font-family: 'Staatliches', cursive;
+  background-color: #7200fd;
+  border-color: #7200fd;
+}
