@@ -26,7 +26,8 @@ body {
   width: 100%;
   font-family: 'Staatliches', cursive;
   box-sizing: border-box;
-
+  box-shadow: 0 2px 5p  #7200fd(0,0,0,0.1);
+  font-size: 1.2em;
 }
 
 .navbar a {

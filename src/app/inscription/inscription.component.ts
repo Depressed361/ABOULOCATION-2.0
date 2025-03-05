@@ -15,7 +15,7 @@ import { User } from '../connexion/user';
   styleUrl: './inscription.component.css'
 })
 export class InscriptionComponent implements OnInit {
-  user!: User;
+  user: any;
   inscriptionForm!: FormGroup;
   constructor(
     private fb: FormBuilder,
@@ -25,32 +25,32 @@ export class InscriptionComponent implements OnInit {
 
   ngOnInit(): void {
     this.inscriptionForm = this.fb.group({
+      name: ['', Validators.required],
       lastname: ['', Validators.required],
-      firstname: ['', Validators.required],
+      username: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      Adresse: ['', Validators.required],
-      password: ['', Validators.required, Validators.minLength(8)]
+      address: ['', Validators.required],
+      permisNumber: ['', Validators.required],
+      phoneNumber: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(8)]]
     });
-
   }
 
-  onSubmit():void {
+  onSubmit(): void {
     if (this.inscriptionForm.valid) {
       this.user = this.inscriptionForm.value;
       this.autService.inscription(this.user).subscribe({
         next: (response: any) => {
           if (response) {
-            this.router.navigate(['connexion']);
+            this.router.navigate(['/connexion']);
           } else {
-            console.log('error', response.message);
+            console.log('error', response.message, this.user);
           }
         },
         error: (error: any) => {
           console.log('inscription error', error);
         }
       });
-
     }
   }
-
 }

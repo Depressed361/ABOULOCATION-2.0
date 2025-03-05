@@ -11,6 +11,7 @@ import { Resa } from '../location-form/resa';
 })
 export class VehiculeService {
   vehicule!: vehicule ;
+  PricePerDay!: number;
 
 
   private apiURL = 'http://localhost:5000/post';
@@ -18,7 +19,11 @@ export class VehiculeService {
 
   constructor(private http:HttpClient) { } // Create an empty constructor
 
+  StockPricePerDay(pricePerDay: number) {
+    this.PricePerDay = pricePerDay;
+  }
 
+//Créer un véhicule
     createVehicule(vehicule: vehicule): Observable<vehicule|undefined> {
       const httpOptions = {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -32,7 +37,7 @@ export class VehiculeService {
         })
       );
     }
-
+//Récupérer la liste des véhicules
     getVehicules(): Observable<vehicule[]> {
       return this.http.get<vehicule[]>(`${this.apiURL}/Vehicules/disponibite/:name`).pipe(
         tap((response) => console.log(response)),
@@ -45,7 +50,7 @@ export class VehiculeService {
 
 
 
-
+//Supprimer un véhicule
 
     deleteVehicule(vehiculeid: number): Observable<null|{}> {
       return this.http.delete(`${this.apiURL}/vehicules/${vehiculeid}`).pipe(
@@ -60,7 +65,7 @@ export class VehiculeService {
 
 
 
-
+//Récupérer la liste des véhicules disponibles
    getVehiculesAvaliable(ville: string, dateDebut: string, heureDebut: string, dateFin: string, heureFin: string): Observable<vehicule[]> {
     const dateHeureDebutISO = new Date(dateDebut + 'T' + heureDebut).toISOString().slice(0, -5) + 'Z';
     const dateHeureFinISO = new Date(dateFin + 'T' + heureFin).toISOString().slice(0, -5) + 'Z';
@@ -113,7 +118,7 @@ export class VehiculeService {
 
          )}
 
-
+//Récupérer le prix par jour d'un véhicule
     getPricePerDay(vehiculeid: string): Observable<number|undefined> {
       return this.http.get<number>(`${this.apiURL}/Vehicules/priceperday/${vehiculeid}`).pipe(
 

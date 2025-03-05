@@ -26,7 +26,7 @@ export class AutService {
     ) { }
 
     inscription (user: User): Observable<User> {
-      return this.http.post<any>(`${this.apiURL}/signup/`, user).pipe(
+      return this.http.post<any>(`${this.apiURL}/inscription/`,user ).pipe(
         tap(response => {
           if (response) {
             console.log('inscription', response);

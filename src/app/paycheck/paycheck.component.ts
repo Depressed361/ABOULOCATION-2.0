@@ -7,12 +7,13 @@ import { LoctationService } from '../loctation.service';
 import { VehiculeService } from '../booking/choose-car/vehicule.service';
 import { vehicule } from '../booking/choose-car/vehicule';
 import { ActivatedRoute } from '@angular/router';
-import { CommonModule, NgIf } from '@angular/common';
+import { Assurance } from './assurance';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-paycheck',
   standalone: true,
-  imports: [ ReactiveFormsModule,NgIf,CommonModule  ],
+  imports: [ ReactiveFormsModule,NgIf,CommonModule ,NgFor ],
   templateUrl: './paycheck.component.html',
   styleUrl: './paycheck.component.css'
 })
@@ -23,6 +24,9 @@ export class PaycheckComponent implements OnInit {
   DateFinLocation!: Date;
   DureeLocation!: number;
   vehicule:vehicule|undefined;
+  assurances : Assurance[]|any;
+  showAssuranceButton: boolean = true;
+  TotalPrice!: number;
 
 
   constructor(
@@ -56,29 +60,31 @@ export class PaycheckComponent implements OnInit {
    }
 
 
-    ;
+   this.TotalPrice=this.vehiculeService.PricePerDay ;
+
+
+
 
   }
+
+
+
+ GetAssurance(){ this.assuranceService.getAssurances().subscribe(
+
+        Assurance => {this.assurances = Assurance;});
+        this.showAssuranceButton = false;
+
+}
+
+calculateTotalPrice(): void {
+  if (this.vehicule && this.DureeLocation) {
+    this.TotalPrice = this.vehiculeService.PricePerDay * this.DureeLocation;
+  }
+}
+
  onSubmit(){
-  if(this.ChooseAssurance.value.AssurancePremium==true){
-     const assurancePremium = this.ChooseAssurance.value.AssurancePremium;
-      this.assuranceService.setAssurancePremium(assurancePremium);
-    this.router.navigate(['assurancePremium']);
-
-  }
-  else if(this.ChooseAssurance.value.AssuranceBasique){
-
-    const assuranceBasique = this.ChooseAssurance.value.AssuranceBasique;
-    this.assuranceService.setAssuranceBasique(assuranceBasique);
-    this.router.navigate(['assuranceBasique']);
-  }
-
-  else{
-    this.router.navigate(['paycheck']);
-  }
 }
 }
-
 
 
 

@@ -1,4 +1,4 @@
-<p>paycheck works!</p>
+
 
 <div  class="container" >
   <h1>Recapitulatif de la location</h1>
@@ -16,35 +16,28 @@
              <p>Date de debut: {{DateDebutLocation}}</p>
              <p>Date de fin: {{DateFinLocation}}</p>
              <p>Nombre de jour:{{DureeLocation}} </p>
-              <p>Prix total: </p>
+              <p>Prix total:{{TotalPrice}} </p>
 
             </div>
 
 
 
 
-           <div class="col-md-6" >
-                <h2> Choix de l'assurance </h2>
-                <form  [formGroup]="ChooseAssurance" (ngSubmit)="onSubmit()">
-                <div class="form-check form-check-inline " >
-                  <input class="form-check-input" type="radio"formControlName="AssuranceBasique" id="inlineRadio1" value="option1">
-                  <label class="form-check label" for="inlineRadio1">Assurance de base</label>
-
-                  </div>
-                  <div class="form-check">
-
-                  <input class="form-check-input" type="radio" formControlName="AssurancePremium" id="inlineRadio1" value="option1">
-                  <label class="form-check label" for="inlineRadio1">Assurance tout risque (caution réduite)</label>
-
-
-                </div>
-
-
-                <button type="submit"(click)="onSubmit()" class="btn btn-primary">Payer</button>
-              </form>
+      <div class="col-md-6"></div>
+        <h2>Choix de l'assurance</h2>
+        <button *ngIf="showAssuranceButton" (click)="GetAssurance()" class="button">Choisir une assurance</button>
+        <div *ngFor= "let assu of assurances" class="col-md-6">
+          <form [formGroup]="ChooseAssurance" (ngSubmit)="onSubmit()">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" formControlName="AssuranceBasique" id="inlineRadio1" value="option1">
+              <label class="form-check label" for="inlineRadio1">{{assu.name}} {{assu.price}} euros</label>
             </div>
-
-    </div>
+            <div >
+            <button type="submit" (click)="onSubmit()" class="button">Payer</button>
+            </div>
+          </form>
+        </div>
+      </div>
 
 
 </div>

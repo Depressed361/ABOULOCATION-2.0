@@ -12,7 +12,7 @@ import { SheduleLocationComponent } from '../shedule-location/shedule-location.c
 @Component({
   selector: 'app-choose-car',
   standalone: true,
-  imports: [NgFor,SheduleLocationComponent],
+  imports: [NgFor,],
   templateUrl: './choose-car.component.html',
   styleUrl: './choose-car.component.css'
 })
@@ -82,6 +82,7 @@ export class ChooseCarComponent implements OnInit {
 
     this.vehiculesList.forEach((vehicule: vehicule) => {
       vehicule.pricePerDay = this.ajustPricePerDay(vehicule.pricePerDay, diffDays);
+     this.vehiculeService.StockPricePerDay(vehicule.pricePerDay);
   });
 
 })
@@ -103,8 +104,8 @@ export class ChooseCarComponent implements OnInit {
 
       this.vehiculeService.setChoosedVehicule(this.vehicule); // on enregistre le véhicule choisi
       this.router.navigate(['/paycheck',vehicule._id]); // on navigue vers la route /vehicule/id
-    }}
+    }
 
 
 
-
+  }

@@ -45,15 +45,6 @@ export class AppComponent implements OnInit {
   this.userId = this.autService.userId
 
   this.isLoggedIn= this.autService.isLogged()
-  if (this.isLoggedIn==false) {
-    console.log('not logged in');
-    this.goToLogin();
-  } else {
-
-    console.log(this.userId);
-
-  }
-
 
 }
 

@@ -1,4 +1,4 @@
-<p>profile works!</p>
+
 
 
 <div class ="container">
@@ -11,7 +11,7 @@
      <p>Adresse: {{user.address}}</p>
      <p>Code postal: {{user.postalCode}}</p>
      <p>Telephone: {{user.phoneNumber}}</p>
-     <p> Numero de permis  {{user.permisNumber}}</p>
+     <p> Numero de permis:  {{user.permisNumber}}</p>
    </div>
     <div>
       <button class="btn btn-primary" >Modifier</button>
@@ -19,10 +19,10 @@
     </div>
  </div>
   <div class="item item2">
-    <button class="btn btn-primary" (click)="getReservations()" >Mes reservations</button>
+    <button class="btn btn-second" (click)="getReservations()" >Mes reservations</button>
     <div *ngIf="resa" class="col-md-6">
       <h2>Mes reservations</h2>
-      <div *ngFor="let res of resa">
+      <div *ngFor="let res of resa" class ="carte">
         <p>Voiture: {{res.vehicule}} </p>
         <p>Date de debut: {{res.dateDebut}}</p>
         <p>Date de fin: {{res.dateFin}}</p>
@@ -30,6 +30,7 @@
 
 
 
- </div>
+          </div>
+    </div>
 
-
+  </div>
