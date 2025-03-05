@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-acceuil',
   standalone: true,
@@ -19,11 +20,13 @@ export class AcceuilComponent implements OnInit{
 
 
 
-  }
 
-  goToBookingVille(){
-    this.router.navigate(['/BookingVille']);
-  }
+
+}
+
+goToBookingVille(){
+  this.router.navigate(['/BookingVille']);
+}
 
 
 }

@@ -1,80 +1,120 @@
-import { Component,OnDestroy,OnInit } from '@angular/core';
+import { Component,importProvidersFrom,OnDestroy,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormGroup, FormBuilder, Validators,FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators,FormControl, AbstractControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ville } from '../booking-ville/ville';
 import { BookingVilleComponent } from '../booking-ville/booking-ville.component';
 import { ActivatedRoute } from '@angular/router';
-import { Subscription, subscribeOn } from 'rxjs';
-import { group } from '@angular/animations';
-
+import { Subscription,  } from 'rxjs';
+import { LoctationService } from '../../loctation.service';
+import { NgIf } from '@angular/common';
 
 
 @Component({
   selector: 'app-shedule-location',
   standalone: true,
-  imports: [ReactiveFormsModule, BookingVilleComponent],
+  imports: [ReactiveFormsModule, BookingVilleComponent,NgIf, ],
   templateUrl: './shedule-location.component.html',
   styleUrl: './shedule-location.component.css'
 })
 export class SheduleLocationComponent implements OnInit{
-  sheduleLocationForm: FormGroup | any;
+
+  sheduleLocationForm!: FormGroup ;
  ville: string| any;
  private routeSub: Subscription | undefined;
+ minDate: string | any;
+ minTime: string | any;
+ minDateFin: string | any;
+  minTimeFin: string | any;
 
-constructor(private router: Router, private route: ActivatedRoute,
-  private formBuilder: FormBuilder
-) {
-  this.sheduleLocationForm  = this.formBuilder.group({
-    dateDebut: ['', Validators.required],
-    dateFin: ['', Validators.required]
-  }, {validator: this.dateRangeValidator});
+ formSubmitted: boolean = false;
+
+constructor(private router: Router,
+  private route: ActivatedRoute,
+  private formBuilder: FormBuilder,
+  private loctationService: LoctationService,
+
+) { const today = new Date();
+  this.minDate = today.toISOString().split('T')[0]
+  this.minTime = today.toISOString().split('T')[1].split('.')[0]
+  this.minDateFin = today.toISOString().split('T')[0]
+  this.minTimeFin = today.toISOString().split('T')[1].split('.')[0]
+
  }
 
 
 
-
     ngOnInit(   ) {
+
       this.routeSub = this.route.paramMap.subscribe(params => {
         this.ville = params.get('ville');
       });
       this.sheduleLocationForm = new FormGroup({
-        date: new FormControl(),
-        heureDebut: new FormControl(),
-        dateDebut: new FormControl(), // Ajout du contrôle 'startDate'
-        dateFin: new FormControl(), // Ajout du contrôle 'endDate'
-        heureFin: new FormControl()
-      });
-  }
+        dateDebut: new FormControl('', [Validators.required, this.dateRangeValidator]),
+        heureDebut: new FormControl('', [Validators.required, this.dateRangeValidator]),
+        dateFin: new FormControl('', [Validators.required, this.dateRangeValidator]),
+        heureFin: new FormControl('', [Validators.required, this.dateRangeValidator]),
+      }, { validators: this.dateRangeValidator });
 
-  dateRangeValidator(control: FormControl) {
-    const startDate = control.get('dateDebut')?.value;
-    const endDate = control.get('dateFin')?.value;
+    }
 
-    return startDate < endDate ? null : { dateRange: true };
-  }
+    dateRangeValidator(control: AbstractControl) {
+      const dateDebut = control.get('dateDebut')?.value;
+      const heureDebut = control.get('heureDebut')?.value;
+      const dateFin = control.get('dateFin')?.value;
+      const heureFin = control.get('heureFin')?.value;
+
+      if (dateDebut && heureDebut && dateFin && heureFin) {
+        if (dateDebut > dateFin) {
+          return { dateRange: true };
+        }
+        if (dateDebut === dateFin && heureDebut > heureFin) {
+          return { dateRange: true };
+        }
+      }
+
+      return null;
+
+    }
+
+
+
+
+
 
   onsubmit() {
+
+    this.formSubmitted= true;
     const ville = this.ville;
     const dateDebut = this.sheduleLocationForm.value.dateDebut;
     const heureDebut = this.sheduleLocationForm.value.heureDebut;
      const dateFin = this.sheduleLocationForm.value.dateFin;
     const heureFin = this.sheduleLocationForm.value.heureFin;
 
-    if (ville && dateDebut && heureDebut && dateFin && heureFin) {
+    if (ville && dateDebut && heureDebut && dateFin && heureFin && this.sheduleLocationForm.valid) {
       // Utiliser un objet pour les paramètres de requête
       this.router.navigate(['/disponibilite', ville], { queryParams: { dateDebut: dateDebut, heureDebut,  dateFin: dateFin, heureFin } });
+      this.loctationService.setDateDebut(dateDebut);
+      this.loctationService.setDateFin(dateFin);
+
     }
+
+
+
   }
 
-  ngOnDestroy() {
+ /* ngOnDestroy() {
     // Nettoyer l'abonnement
     if (this.routeSub) {
       this.routeSub.unsubscribe();
     }
-  }
+  }*/
+
+
 
 
 
 
 }
+
+
+

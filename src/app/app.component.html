@@ -1,17 +1,36 @@
 
 <nav class="navbar">
+
+
   <a href="#" class="logo" ><i>ABOULOCATION</i></a>
-  <div class="nav-links" #navLinks  >
+<div class="menu">
   <ul>
-    <li><a href="#">louer</a></li>
+    <li><a (click)="goToBokingVille()">louer</a></li>
     <li><a href="#">Inscription</a></li>
-    <li><a href="#">Connexion</a></li>
+    <li *ngIf="!isLoggedIn"><a (click)="goToLogin()" >Connexion</a></li>
+    <li *ngIf="isLoggedIn"><a (click)="goToProfile()">Profil</a></li>
+
     <li><a href="#">FAQ</a></li>
   </ul>
-  </div>
+</div>
 
-    <img src ='../assets/burger.png' class='burger' alt='burger-menu'> <!-- Path: ABOULOCATION-2.0/src/assets/burger.png -->
+<div class="burger-menu" (click)="toggleMenu ()">
+    <div *ngIf="!showMenu" >
+      <img src ='../assets/burger.png' class='burger' alt='burger-menu'>
+    </div>
+  <ul *ngIf="showMenu" class="mobile-menu"  >
+    <li><a (click)="goToBokingVille()">louer</a></li>
+    <li><a href="#">Inscription</a></li>
+    <li *ngIf="!isLoggedIn"><a (click)="goToLogin()" >Connexion</a></li>
+    <li *ngIf="isLoggedIn"><a (click)="goToProfile()">Profil</a></li>
+
+    <li><a href="#">FAQ</a></li>
+  </ul>
+</div>
+
+ <!-- <img src ='../assets/burger.png' class='burger' alt='burger-menu'>  Path: ABOULOCATION-2.0/src/assets/burger.png -->
 
 </nav>
 
 <router-outlet></router-outlet>
+

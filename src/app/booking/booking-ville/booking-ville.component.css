@@ -1,24 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+.carte {
+  width: 320px;
+  height: 450px;
+  overflow: hidden;
+  justify-content: center;
+  border-radius: 20px;
 
+  position: relative;
+}
+
+
+
+.carte-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+
+  border-radius: 15px;
+  transition: 2s;
+
+}
+
+.carte:hover .carte-body {
+
+  right: 0;
+  background: rgba(180, 74, 237, 0.5);
+  backdrop-filter: blur(5px);
+  border: #7200fd 8px solid;
+
+
+}
+
+
+.carte-img {
+  width: 1em;
+  height: 1em;
+  object-fit: cover;
+ border-radius: 15px;
+}
+.card-title {
+  text-transform : uppercase;
+  font-size: 50px;
+  font-style: italic;
+
+}
+
+
+.card-deck {
+
+
+  gap: 1rem;
+  padding: 1rem;
+  position: relative;
+  font-family: 'Staatliches', cursive;
+}
 .booking-ville {
   position: relative;
   ;
 
   font-family: 'Staatliches', cursive;
 }
-.CardStyle {
-  width: 18rem;
-}
 
-.btn  {
+
+
+
+.carte-btn  {
   background-color: #7200fd;
   border-color: #7200fd;
   font-family: 'Staatliches', cursive;
-
+  width: 120px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
-.btn:hover {
+.carte-btn:hover {
   background-color: #fefdff;
   border-color: #7200fd;
   font-family: 'Staatliches', cursive;
@@ -29,6 +94,11 @@
   .booking-ville {
     position: relative;
 
+    font-family: 'Staatliches', cursive;
+  }
+
+  h1 {
+    font-size: 2em;
     font-family: 'Staatliches', cursive;
   }
 

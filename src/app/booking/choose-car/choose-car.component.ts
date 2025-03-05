@@ -6,8 +6,7 @@ import { NgFor } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { SheduleLocationComponent } from '../shedule-location/shedule-location.component';
-import { map, } from 'rxjs';
-import { Validator } from '@angular/forms';
+
 
 
 @Component({
@@ -20,6 +19,7 @@ import { Validator } from '@angular/forms';
 export class ChooseCarComponent implements OnInit {
 
   vehiculesList: vehicule[] | any ; // on récupère la liste des véhicules
+  vehicule!: vehicule;
   ville: string | any;
   dateFin: string| any;
   heureFin: string|any;
@@ -99,9 +99,10 @@ export class ChooseCarComponent implements OnInit {
 
 
 
-   goToContrat(vehicule: vehicule) {
+   goToContrat( vehicule: vehicule) {
 
-      this.router.navigate(['/vehicule', vehicule._id]); // on navigue vers la route /vehicule/id
+      this.vehiculeService.setChoosedVehicule(this.vehicule); // on enregistre le véhicule choisi
+      this.router.navigate(['/paycheck',vehicule._id]); // on navigue vers la route /vehicule/id
     }}
 
 

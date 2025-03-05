@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+
+}
+.form {
+  font-style: italic,
+  font-family: 'Staatliches', cursive;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    gap: 5px ;
+    border: #7200fd;
+    border-radius: 5px ;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+ gap: 5px;
+
+}
+
+@media (max-width: 600px) {
+  .form {
+    margin: 0;
+    padding: 0;
+  }
+
+  .form-content {
+    margin: 0;
+    padding: 0;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  input {
+    height: 40px;
+    width: 100%;
+    background-color: #f8f9fa;
+  }
+}

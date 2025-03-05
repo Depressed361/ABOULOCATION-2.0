@@ -12,19 +12,124 @@
 }
 
 body {
-  padding-top: 0px;
+  padding-top: 5px;
   margin: 0 0 0 0;
 
   position: relative;
   width: 100%;
 
+
+
 }
 
+.container {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 250px 250px 200px;
+  gap: 2px 2px ;
+  position: relative;
+  padding-bottom:10px; ;
+}
+.item1  {
+  grid-column: 1/4;
+  grid-row: 1/3;
+  background-image: url('../../assets/image-acceuil/bmw.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  border-radius: 10px;
+
+}
+
+.item-Detail{
+  right: -100%;
+  transition: 1s;
+}
+.item:hover .item-Detail {
+  right: 0;
+  background: rgba(180, 74, 237, 0.5);
+  backdrop-filter: blur(5px);
+  border: #7200fd 8px solid;
+
+}
+.itemText {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+
+
+}
+.item {
+  border: 2px;
+  background-color: blueviolet;
+  border-radius: 10px;
+  color: white;
+  padding: 5px;
+  font-style: italic;
+  :hover {
+    color: rgb(223, 161, 236)
+   ;
+  };
+}
+
+
+
+@media screen and (max-width: 400px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr; /* Utilisez une valeur appropriée pour grid-template-columns */
+    grid-template-rows: 1fr 1fr 1fr 1fr; /* Utilisez une valeur appropriée pour grid-template-rows */
+    gap: 10px;
+
+  }
+
+  .item1 {
+    /*grid-column: span 1;  Utilisez une valeur appropriée pour grid-column */
+    background-image: url('../../assets/image-acceuil/bmw.png');
+    grid-template-rows: 1/1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .item  {
+    grid-column:   1; /* Utilisez une valeur appropriée pour grid-column */
+    border: 2px solid; /* Ajout de 'solid' pour spécifier le type de bordure */
+    background-color: blueviolet;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+    font-style: italic;
+    font-size: 10px ;
+
+  }
+  .item h1 {
+    font-size: 19px;
+  }
+
+  .itemText {
+    position: absolute;
+    font-size: 10px;
+    text-align: center;
+
+  }
+
+  .item:hover {
+    color: black;
+  }
+
+/*
 .section-brand {  background-image: url('../../assets/image-acceuil/bmw.png');
   position: relative;
   margin-top: 0%;
   padding-top: 0%;
  /* height: 70vh;*/
+ /*
  height: 70vh;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -33,16 +138,57 @@ body {
   .section-brand div {
     position: absolute;
     bottom: 0;
-    /*left: 0;*/
+    /*left: 0;
     margin-left: 20px;
-    /* autres styles */
+    /* autres styles
   }
 
-
+/*
 .section-brand h1 {
   padding: 0 10px;
   font-size: 50px;
   margin-top: 0%;
 
+}*/
+
+
+
 }
+.footer-container {
+
+  padding-top: 5px;
+  background-color: #faf7f7;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: 'Staatliches', cursive;
+  box-sizing: border-box;
+  position: relative;
+}
+.footer-item h1{
+  font-size: 20px;
+
+
+}
+.footer-title {
+  font-size: 15px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.footer-item {
+justify-content: space-between;
+max-width: 90%;
+display: flex;
+gap: 10px;
+
+
+font-size: 14px;
+
+
+}
+
 

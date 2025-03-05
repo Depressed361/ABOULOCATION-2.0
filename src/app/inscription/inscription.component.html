@@ -1,0 +1,43 @@
+<p>inscription works!</p>
+
+<div class="form" >
+  <h1>Inscription</h1>
+  <form [formGroup]="inscriptionForm">
+  <div class="form-group">
+    <label for="name">Nom</label>
+    <input type="text" class="form-control" id="name" formControlname="name" required>
+
+    <label for="lastname">Prenom</label>
+    <input type="text" class="form-control" id="lastname" formControlname="lastname" required>
+
+    <label for="username">Nom d'utilisateur</label>
+    <input type="text" class="form-control" id="username" formControlname="username" required>
+
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" formControlname="email" required>
+
+    <label for="phoneNumber">Numero de telephone</label>
+    <input type="text" class="form-control" id="phoneNumber" formControlname="phoneNumber" required>
+
+    <label for = "NumeroDePermis">Numero de permis</label>
+    <input type="text" class="form-control" id="NumeroDePermis" formControlname="NumeroDePermis" required>
+
+    <label for="password">Mot de passe</label>
+    <input type="password" class="form-control" id="password" formControlname="password" required>
+
+    <label for="address">Adresse</label>
+    <input type="text" class="form-control" id="address" formControlname="address" required>
+
+    <button class="btn btn-primary" (click)="onSubmit()">S'inscrire</button>
+
+
+
+
+
+
+
+ </div>
+
+</form>
+
+</div>

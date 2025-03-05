@@ -3,13 +3,14 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, of,tap,catchError } from 'rxjs';
 import { vehicule } from './vehicule';
 import { map } from 'rxjs/operators';
+import { Resa } from '../location-form/resa';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class VehiculeService {
-
+  vehicule!: vehicule ;
 
 
   private apiURL = 'http://localhost:5000/post';
@@ -82,7 +83,7 @@ export class VehiculeService {
 
 
     getVehiculeById(vehiculeid:string ): Observable<vehicule|undefined> {
-      return this.http.get<vehicule>(`${this.apiURL}/vehicules/${vehiculeid}`).pipe(
+      return this.http.get<vehicule>(`${this.apiURL}/vehicule/${vehiculeid}`).pipe(
         tap((response) => console.log(response)),
         catchError(error => {
           console.log('error',error);
@@ -128,6 +129,30 @@ export class VehiculeService {
         console.error(error);
         return of(errorValue);
       }
+
+
+      setChoosedVehicule(vehicule: vehicule) {
+
+        this.vehicule = vehicule;
+
+
+
+       }
+
+      getChoosedVehicule(): vehicule  {
+        if (this.vehicule) {
+          return this.vehicule;
+        }
+
+        else {
+         console.error('No vehicule selected');
+          return {} as vehicule;
+        }
+
+
+
+}
+
 
 
 }

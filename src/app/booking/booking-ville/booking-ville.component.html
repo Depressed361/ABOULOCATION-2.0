@@ -1,14 +1,18 @@
-<div class="booking-ville">
+<div class="booking-ville container" >
 <h1>Choisissez la Ville</h1>
-
-<div *ngFor="let ville of villes" class="card horizontal" >
- <div class="card-image">
-<img [src]="ville.image" alt="Card image cap"/>
-</div>
-  <div class="card-body">
+<div class="card-deck">
+<div *ngFor="let ville of villes"  >
+ <div class="carte" style="width: 18rem;">
+  <div class="carte-img">
+    <img [src]="ville.image" alt="Card image cap"/>
+  </div>
+  <div class="carte-body">
     <h5 class="card-title">{{ville.name}}</h5>
 
-    <a (click)="gotoSheduleLocation(ville)" class="btn btn-primary" c>CHOISIR</a>
+    <button class="carte-btn"(click)="gotoSheduleLocation(ville)" >
+      CHOISIR
+   </button>
   </div>
+ </div>
 </div>
 </div>

@@ -4,11 +4,14 @@ import { Observable, of, tap,catchError } from 'rxjs';
 import { ville } from './booking-ville/ville';
 import { VILLES } from './booking-ville/mock-ville';
 import { vehicule } from './choose-car/vehicule';
+import { Resa } from './location-form/resa';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookingService {
+
+
 
    private apiURL = 'http://localhost:5000/post';
 
@@ -38,12 +41,6 @@ getVehicules():Observable <vehicule[]> {
 
 }
 
-/*changeCity(newCity: string): Observable<any> {
-  return this.http.post(this.apiURL, { city: newCity });
-}*/
-
-
-
-
 
 }
+

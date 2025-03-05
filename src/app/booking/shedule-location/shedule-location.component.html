@@ -1,17 +1,29 @@
-<form [formGroup]="sheduleLocationForm" (ngSubmit)="onsubmit()">
-  <label for="dateDebut">Start Date:</label>
-  <input type="date" id="dateDebut" formControlName="dateDebut" />
-
-  <label for="heureDebut">Start Time:</label>
-  <input type="time" id="heureDebut" formControlName="heureDebut" />
 
 
-  <label for="dateFin">End Date:</label>
-  <input type="date" id="dateFin" formControlName="dateFin"  />
+ <div class="form">
+  <h2>Choix durée de la Location</h2>
+  <Div class="form-content">
+  <form [formGroup]="sheduleLocationForm" (ngSubmit)="onsubmit()">
+    <label for="dateDebut">Start Date:</label>
+    <input type="date" id="dateDebut" formControlName="dateDebut" [min]="minDate" />
 
-  <label for="heureFin">End Time:</label>
-  <input type="time" id="heureFin" formControlName="heureFin" />
 
 
-  <button type="submit" (click)="onsubmit()">Submit</button>
+    <label for="heureDebut">Start Time:</label>
+    <input type="time" id="heureDebut" formControlName="heureDebut" />
 
+
+    <label for="dateFin">End Date:</label>
+    <input type="date" id="dateFin" formControlName="dateFin" [min]="minDate" />
+
+
+
+    <label for="heureFin">End Time:</label>
+    <input type="time" id="heureFin" formControlName="heureFin" />
+
+>
+
+    <button type="submit" [disabled]="sheduleLocationForm.invalid">Submit</button>
+  </form>
+</Div>
+</div>
