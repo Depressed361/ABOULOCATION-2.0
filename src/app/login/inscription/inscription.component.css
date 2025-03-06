@@ -1,0 +1,33 @@
+*{
+
+  font-family: 'Staatliches', cursive;
+  font-styles: bold;
+  font-size: 20px;
+
+}
+.container {
+  margin: 2em;
+
+}
+
+input{
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color:rgb(79, 54, 204);
+
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+
+.btn-primary:hover {
+  background-color: rgb(60, 40, 150);
+  cursor: pointer;
+}

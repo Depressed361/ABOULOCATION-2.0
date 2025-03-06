@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AutService } from '../aut.service';
+import { AutService } from '../../aut.service';
 import { User } from './user';
 
 
@@ -45,8 +45,8 @@ export class ConnexionComponent implements OnInit {
       next: (response:any ) => {
         if (response && response.token) {
           this.router.navigate(['profile/',response.user._id]);
-          
-  
+
+
         } else {
           console.log('error', response.message);
         }
@@ -60,6 +60,10 @@ export class ConnexionComponent implements OnInit {
 
 
 }
+}
+
+goToFogotPassword(): void {
+  this.router.navigate(['/forgot-password']);
 }
 
 }

@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Réinitialiser le mot de passe</h2>
+  <form [formGroup]="forgotPasswordForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email" class="label">Email:</label>
+      <input id="email" formControlName="email" type="email" class="form-control" required>
+      <div *ngIf="forgotPasswordForm.get('email')?.invalid && forgotPasswordForm.get('email')?.touched" class="error-message">
+        Veuillez entrer une adresse email valide.
+      </div>
+    </div>
+    <button type="submit" class="btn-primary" [disabled]="forgotPasswordForm.invalid">Envoyer</button>
+  </form>
+  <div *ngIf="successMessage" class="success-message">
+    {{ successMessage }}
+  </div>
+</div>

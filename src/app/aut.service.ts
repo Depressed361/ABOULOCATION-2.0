@@ -3,7 +3,7 @@ import { HttpClient,HttpErrorResponse, HttpHeaders } from '@angular/common/http'
 import { Router,  } from '@angular/router';
 import { Observable,throwError } from 'rxjs';
 import { tap , catchError,  } from 'rxjs/operators';
-import { User } from './connexion/user';
+import { User } from './login/connexion/user';
 import { Resa } from './booking/location-form/resa';
 import { of } from 'rxjs';
 import { useAnimation } from '@angular/animations';
@@ -57,7 +57,7 @@ export class AutService {
 
 
 
-
+ // savoir si un utilisateur est connecté
     isLogged(): boolean {
       return !!localStorage.getItem('token');
 
@@ -76,7 +76,27 @@ export class AutService {
       return throwError('Something bad happened; please try again later.');
     }
 
+    isTokenValid(): boolean {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        return false;
+      }
+      // Ajoutez ici la logique pour vérifier la validité du token
+      // Par exemple, vérifier l'expiration du token
+      const tokenPayload = JSON.parse(atob(token.split('.')[1]));
+      const expiry = tokenPayload.exp;
+      const now = Math.floor(Date.now() / 1000);
+      return now < expiry;
+    }
 
+    forgotPassword(data: { email: string }): Observable<any> {
+      return this.http.post<any>(`${this.apiURL}/forgot-password`, data).pipe(
+        tap(response => {
+          console.log('Email de réinitialisation envoyé', response);
+        }),
+        catchError(this.handleError)
+      );
+    }
 
 
     logout() {

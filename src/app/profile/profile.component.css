@@ -11,12 +11,35 @@ body {
 
 }
 
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(180, 74, 237, 0.5); /* Couleur violette avec transparence */
+  border-top: 5px solid #7200fd; /* Couleur violette plus foncée pour l'effet de rotation */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animation de rotation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .container
 {
   border: 5px solid #b402b1;
   border-radius: 20px;
   background-color: #f8f9fa;
-
+  margin-top: 20px;
 }
 .container h2{
   color: #b402b1;
@@ -39,8 +62,12 @@ box-shadow: 0 0 10px #3a0039;
   background-color: #f8f9fa;
   padding: 10px;
   margin-top: 20px;
-  box-shadow: 0 0 10px #3a0039;
+
   font-family: 'Staatliches', cursive;
+}
+
+.carte:hover {
+  box-shadow: 0 0 10px #3a0039;
 }
 .btn-primary
 {

@@ -1,0 +1,50 @@
+* {
+  font-family: 'Staatliches', cursive;
+}
+
+.container {
+  margin: 2em;
+}
+
+.btn-primary {
+  background-color: rgb(79, 54, 204);
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: rgb(60, 40, 150);
+  cursor: pointer;
+}
+
+/* Ajout de styles spécifiques pour le formulaire de réinitialisation de mot de passe */
+.form-group {
+  margin-bottom: 1em;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-control:focus {
+  border-color: rgb(79, 54, 204);
+  outline: none;
+  box-shadow: 0 0 5px rgba(79, 54, 204, 0.5);
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}

@@ -22,14 +22,38 @@ body {
 
 }
 
-.container {
+/* Spinner en forme de cercle violet qui tourne */
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(180, 74, 237, 0.5); /* Couleur violette avec transparence */
+  border-top: 5px solid #7200fd; /* Couleur violette plus foncée pour l'effet de rotation */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
 
+/* Animation de rotation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 250px 250px 200px;
   gap: 2px 2px ;
   position: relative;
-  padding-bottom:10px; ;
+  padding-bottom:10px;
 }
 .item1  {
   grid-column: 1/4;
@@ -62,12 +86,15 @@ body {
 
 }
 .item {
-  border: 2px;
+  gap:5px ;
+  border: 2px, #3a0039 ;
   background-color: blueviolet;
   border-radius: 10px;
   color: white;
   padding: 5px;
-  font-style: italic;
+  box-shadow: 0 0 10px #3a0039;
+  font-style: italic 25px;
+
   :hover {
     color: rgb(223, 161, 236)
    ;

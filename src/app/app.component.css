@@ -7,12 +7,14 @@
   text-decoration: none;
   list-style: none;
   font-family: 'Staatliches', cursive;
+
 }
 
 
 
 body {
   font-family: 'Staatliches', cursive;
+
 
 }
 .navbar{
@@ -26,7 +28,7 @@ body {
   width: 100%;
   font-family: 'Staatliches', cursive;
   box-sizing: border-box;
-  box-shadow: 0 2px 5p  #7200fd(0,0,0,0.1);
+  box-shadow: 0px 0px 10px #7200fd;
   font-size: 1.2em;
 }
 
@@ -95,6 +97,7 @@ margin: 0 25px;
   @media screen and (max-width: 900px) {
     .navbar{
       padding: 0;
+      box-shadow: 0px 0px 10px #7200fd;
     }
 
     .navbar .menu {

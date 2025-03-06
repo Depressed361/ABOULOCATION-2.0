@@ -3,8 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 import { AutService,  } from './aut.service';
 import { NgIf } from '@angular/common';
-import { User } from './connexion/user';
-import { ImageSliderComponent } from './image-slider/image-slider.component';
+import { User } from './login/connexion/user';
 
 @Component({
   selector: 'app-root',

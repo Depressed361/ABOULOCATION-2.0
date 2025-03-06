@@ -1,15 +1,16 @@
+<mat-spinner *ngIf="isLoading" class="spinner"></mat-spinner>
+<body *ngIf="!isLoading">
 
-<body>
 
 
 
 
     <div class="container">
       <div class="item item1" >
-        <div class= itemText>
+        <div (click)="goToBookingVille()" class= itemText>
         <h1><i>LOUE TA VOITURE</i></h1>
         <p>Site de location en ligne, à porté de main</p>
-         <a (click)="goToBookingVille()">louer</a>
+         <a >louer</a>
 
 
         </div>
@@ -75,4 +76,6 @@
 
       </div>
     </footer>
+
+
     </body>

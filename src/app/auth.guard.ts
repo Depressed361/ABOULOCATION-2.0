@@ -6,7 +6,7 @@ import { AutService } from './aut.service';
 
 
 export const authGuard: CanActivateFn = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
- if (inject(AutService).isLogged()) {
+ if (inject(AutService).isLogged() && inject(AutService).isTokenValid()) {
    return true;
 
   }
@@ -16,4 +16,6 @@ export const authGuard: CanActivateFn = (route: ActivatedRouteSnapshot, state: R
     return false;
   }
 }
+
+
 

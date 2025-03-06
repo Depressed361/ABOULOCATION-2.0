@@ -1,7 +1,7 @@
+<mat-spinner *ngIf="isLoading" class="spinner"></mat-spinner>
 
 
-
-<div class ="container">
+<div *ngIf="!isLoading" class ="container">
  <div class="item item1">
    <div *ngIf="user" class="col-md-6">
      <h2>Informations personnelles</h2>

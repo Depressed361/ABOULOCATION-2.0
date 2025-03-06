@@ -1,0 +1,35 @@
+*{
+  font-family: 'Staatliches', cursive;
+}
+
+h1 {
+  font-size: 19px;
+  font-family: 'Staatliches', cursive;
+  font-style: italic;
+  text-align: center;
+  margin-top: 3rem;
+  color: #7200fd;
+  shadow:5px 0 0 0
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding:12rem;
+}
+
+.item {
+  border: 5px solid;
+   color: #7200fd;
+  padding :10px;
+  background-color:rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow:0px 0px 5px #7200fd;
+
+
+}
+
+.item:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
