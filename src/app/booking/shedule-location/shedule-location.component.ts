@@ -12,7 +12,7 @@ import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-shedule-location',
   standalone: true,
-  imports: [ReactiveFormsModule, BookingVilleComponent,NgIf, ],
+  imports: [ReactiveFormsModule, ],
   templateUrl: './shedule-location.component.html',
   styleUrl: './shedule-location.component.css'
 })

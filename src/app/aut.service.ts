@@ -81,7 +81,7 @@ export class AutService {
       if (!token) {
         return false;
       }
-      // Ajoutez ici la logique pour vérifier la validité du token
+
       // Par exemple, vérifier l'expiration du token
       const tokenPayload = JSON.parse(atob(token.split('.')[1]));
       const expiry = tokenPayload.exp;
@@ -89,7 +89,7 @@ export class AutService {
       return now < expiry;
     }
 
-    forgotPassword(data: { email: string }): Observable<any> {
+    forgotPassword(data: { email: string }): Observable<any> {//envoyer un email de réinitialisation de mot de passe
       return this.http.post<any>(`${this.apiURL}/forgot-password`, data).pipe(
         tap(response => {
           console.log('Email de réinitialisation envoyé', response);
@@ -104,7 +104,7 @@ export class AutService {
       this.router.navigate(['/']);
     }
 
-    getUserById(userId: string): Observable<User> {
+    getUserById(userId: string): Observable<User> {//afficher les informations d'un utilisateur
       const localStorageToken = localStorage.getItem('token') || '';
       userId = localStorage.getItem('userId') || '';
       const headers = new HttpHeaders({
@@ -117,7 +117,7 @@ export class AutService {
       );
     }
 
-    getReservation(userId:string|null):Observable <Resa[]> {
+    getReservation(userId:string|null):Observable <Resa[]> {//afficher les reservations d'un utilisateur
       const localStorageToken = localStorage.getItem('token');
       const headers = new HttpHeaders({
         'Content-Type': 'application/json',
@@ -134,9 +134,19 @@ export class AutService {
 
 
 
+
+
     }
 
+
+
+
+
+
+    getUserId(): string {
+      return localStorage.getItem('userId') || '';
     }
 
 
+  }
 

@@ -13,7 +13,7 @@ export class LoctationService {
    }
 
 
-    setDateDebut(dateDebut: string | Date){
+    setDateDebut(dateDebut:  Date){
       this.dateDebut =new Date (dateDebut);
 }
 
@@ -36,6 +36,8 @@ getdateDebut(){
 getDateFin(){
   return this.dateFin;
 }
+
+
 
 
 // Compare this snippet from ABOULOCATION-2.0/src/app/booking-ville/ville.ts:

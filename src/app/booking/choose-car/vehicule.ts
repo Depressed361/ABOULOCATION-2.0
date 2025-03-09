@@ -1,7 +1,7 @@
 import { ville } from '../booking-ville/ville';
 
 export class vehicule {
-    _id   :number;
+    _id   :string;
     picture: string;
     immatriculation: string;
     make: string;
@@ -11,7 +11,7 @@ export class vehicule {
     disponible: boolean;
     name: string;
 
-    constructor(_id: number, picture :string, immatriculation: string, make: string, modele: string, annee: number, pricePerDay: number, name: string) {
+    constructor(_id: string, picture :string, immatriculation: string, make: string, modele: string, annee: number, pricePerDay: number, name: string) {
         this._id=_id
         this.picture = picture;
         this.immatriculation = immatriculation;
