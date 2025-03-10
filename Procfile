@@ -1,1 +1,1 @@
-web: serve -s dist/ABOULOCATION-2.0
+web: serve -s dist/aboulocation
