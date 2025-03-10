@@ -1,1 +1,1 @@
-web: serve -s dist/aboulocation
+web: node server.js
