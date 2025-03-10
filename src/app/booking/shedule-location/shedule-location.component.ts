@@ -34,7 +34,7 @@ constructor(private router: Router,
   private loctationService: LoctationService,
 
 ) { const today = new Date();
-  this.minDate = today.toISOString().split('T')[0]
+  this.minDate = today.toISOString().split('T')[0] //on fromate pour envoyez la date au format yyyy-mm-dd attendu par le navigateur
   this.minTime = today.toISOString().split('T')[1].split('.')[0]
   this.minDateFin = today.toISOString().split('T')[0]
   this.minTimeFin = today.toISOString().split('T')[1].split('.')[0]
@@ -48,7 +48,7 @@ constructor(private router: Router,
       this.routeSub = this.route.paramMap.subscribe(params => {
         this.ville = params.get('ville');
       });
-      this.sheduleLocationForm = new FormGroup({
+      this.sheduleLocationForm = new FormGroup({ //initialisation du formulaire qui est un objet de type FormGroup
         dateDebut: new FormControl('', [Validators.required, this.dateRangeValidator]),
         heureDebut: new FormControl('', [Validators.required, this.dateRangeValidator]),
         dateFin: new FormControl('', [Validators.required, this.dateRangeValidator]),
@@ -98,7 +98,9 @@ constructor(private router: Router,
 
     }
 
-
+    else {
+      alert('Veuillez remplir tous les champs du formulaire.');
+    }
 
   }
 
