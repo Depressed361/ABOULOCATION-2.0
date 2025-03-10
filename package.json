@@ -10,7 +10,6 @@
   },
   "private": true,
   "dependencies": {
-    "serve": "^14.2.4",
     "@angular/animations": "^17.3.0",
     "@angular/cdk": "^17.3.8",
     "@angular/common": "^17.3.0",
@@ -24,6 +23,7 @@
     "jquery": "^3.7.1",
     "ngx-slick-carousel": "^17.0.0",
     "rxjs": "~7.8.0",
+    "serve": "^14.2.4",
     "slick-carousel": "^1.8.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
@@ -39,7 +39,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-
     "typescript": "~5.4.2"
   }
 }
