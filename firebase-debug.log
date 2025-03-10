@@ -1,0 +1,214 @@
+[debug] [2025-03-10T16:16:51.746Z] ----------------------------------------------------------------------
+[debug] [2025-03-10T16:16:51.748Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\boubo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-03-10T16:16:51.749Z] CLI Version:   13.33.0
+[debug] [2025-03-10T16:16:51.749Z] Platform:      win32
+[debug] [2025-03-10T16:16:51.749Z] Node Version:  v22.1.0
+[debug] [2025-03-10T16:16:51.749Z] Time:          Mon Mar 10 2025 17:16:51 GMT+0100 (heure normale d’Europe centrale)
+[debug] [2025-03-10T16:16:51.749Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-10T16:16:51.758Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-10T16:16:51.759Z] > authorizing via signed-in user (aboubacar.f1997@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\boubo\ABOULOCATION-2.0\ABOULOCATION-2.0
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-03-10T16:23:03.281Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:23:03.281Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:23:03.282Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-03-10T16:23:03.282Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"aboulocation-frontend","name":"aboulocation-frontend"}
+[debug] [2025-03-10T16:23:04.166Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2025-03-10T16:23:04.166Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.5691173655037921429"}
+[debug] [2025-03-10T16:23:04.167Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:23:04.167Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:23:04.167Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5691173655037921429 [none]
+[debug] [2025-03-10T16:23:04.901Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5691173655037921429 200
+[debug] [2025-03-10T16:23:04.901Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5691173655037921429 {"name":"operations/cp.5691173655037921429"}
+[debug] [2025-03-10T16:23:05.404Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-03-10T16:23:05.404Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:23:05.405Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:23:05.405Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5691173655037921429 [none]
+[debug] [2025-03-10T16:23:05.709Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5691173655037921429 200
+[debug] [2025-03-10T16:23:05.709Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5691173655037921429 {"name":"operations/cp.5691173655037921429"}
+[debug] [2025-03-10T16:23:06.711Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-03-10T16:23:06.712Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:23:06.712Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:23:06.712Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5691173655037921429 [none]
+[debug] [2025-03-10T16:23:07.042Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5691173655037921429 200
+[debug] [2025-03-10T16:23:07.042Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5691173655037921429 {"name":"operations/cp.5691173655037921429","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true}}
+[debug] [2025-03-10T16:23:09.051Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-03-10T16:23:09.052Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:23:09.052Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:23:09.052Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5691173655037921429 [none]
+[debug] [2025-03-10T16:23:09.360Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5691173655037921429 200
+[debug] [2025-03-10T16:23:09.361Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5691173655037921429 {"name":"operations/cp.5691173655037921429","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"542097667903","projectId":"aboulocation-frontend","lifecycleState":"ACTIVE","name":"aboulocation-frontend","createTime":"2025-03-10T16:23:05.777540Z"}}
+[debug] [2025-03-10T16:23:09.362Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:23:09.362Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:23:09.362Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/aboulocation-frontend:addFirebase [none]
+[debug] [2025-03-10T16:23:10.430Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/aboulocation-frontend:addFirebase 403
+[debug] [2025-03-10T16:23:10.430Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/aboulocation-frontend:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-03-10T16:23:10.431Z] Request to https://firebase.googleapis.com/v1beta1/projects/aboulocation-frontend:addFirebase had HTTP Error: 403, The caller does not have permission
+[debug] [2025-03-10T16:23:10.505Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/aboulocation-frontend:addFirebase had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\boubo\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\boubo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
+[debug] [2025-03-10T16:24:31.888Z] ----------------------------------------------------------------------
+[debug] [2025-03-10T16:24:31.890Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\boubo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-03-10T16:24:31.890Z] CLI Version:   13.33.0
+[debug] [2025-03-10T16:24:31.890Z] Platform:      win32
+[debug] [2025-03-10T16:24:31.890Z] Node Version:  v22.1.0
+[debug] [2025-03-10T16:24:31.891Z] Time:          Mon Mar 10 2025 17:24:31 GMT+0100 (heure normale d’Europe centrale)
+[debug] [2025-03-10T16:24:31.891Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-10T16:24:31.898Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-10T16:24:31.898Z] > authorizing via signed-in user (aboubacar.f1997@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\boubo\ABOULOCATION-2.0\ABOULOCATION-2.0
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-03-10T16:25:18.466Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:25:18.466Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:25:18.467Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-03-10T16:25:18.467Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"aboulocation-frontend","name":"aboulocation-frontend"}
+[debug] [2025-03-10T16:25:19.064Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2025-03-10T16:25:19.064Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2025-03-10T16:25:24.075Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\boubo\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:269:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-03-10T16:25:37.723Z] ----------------------------------------------------------------------
+[debug] [2025-03-10T16:25:37.725Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\boubo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-03-10T16:25:37.726Z] CLI Version:   13.33.0
+[debug] [2025-03-10T16:25:37.726Z] Platform:      win32
+[debug] [2025-03-10T16:25:37.726Z] Node Version:  v22.1.0
+[debug] [2025-03-10T16:25:37.726Z] Time:          Mon Mar 10 2025 17:25:37 GMT+0100 (heure normale d’Europe centrale)
+[debug] [2025-03-10T16:25:37.726Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-10T16:25:37.734Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-10T16:25:37.734Z] > authorizing via signed-in user (aboubacar.f1997@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\boubo\ABOULOCATION-2.0\ABOULOCATION-2.0
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-03-10T16:25:58.069Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:25:58.069Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:25:58.071Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-03-10T16:25:58.734Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-03-10T16:25:58.734Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2025-03-10T16:26:03.747Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\boubo\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:269:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-03-10T16:26:21.573Z] ----------------------------------------------------------------------
+[debug] [2025-03-10T16:26:21.575Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\boubo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-03-10T16:26:21.575Z] CLI Version:   13.33.0
+[debug] [2025-03-10T16:26:21.575Z] Platform:      win32
+[debug] [2025-03-10T16:26:21.576Z] Node Version:  v22.1.0
+[debug] [2025-03-10T16:26:21.576Z] Time:          Mon Mar 10 2025 17:26:21 GMT+0100 (heure normale d’Europe centrale)
+[debug] [2025-03-10T16:26:21.576Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-10T16:26:21.583Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-10T16:26:21.583Z] > authorizing via signed-in user (aboubacar.f1997@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\boubo\ABOULOCATION-2.0\ABOULOCATION-2.0
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-03-10T16:27:01.245Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:27:01.245Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:27:01.246Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-03-10T16:27:01.246Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"aboulocation-app","name":"aboulocation-app"}
+[debug] [2025-03-10T16:27:02.202Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2025-03-10T16:27:02.202Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.6713702472441220258"}
+[debug] [2025-03-10T16:27:02.203Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:27:02.203Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:27:02.203Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6713702472441220258 [none]
+[debug] [2025-03-10T16:27:03.033Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6713702472441220258 200
+[debug] [2025-03-10T16:27:03.033Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6713702472441220258 {"name":"operations/cp.6713702472441220258"}
+[debug] [2025-03-10T16:27:03.544Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-03-10T16:27:03.544Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:27:03.544Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:27:03.544Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6713702472441220258 [none]
+[debug] [2025-03-10T16:27:03.949Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6713702472441220258 200
+[debug] [2025-03-10T16:27:03.949Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6713702472441220258 {"name":"operations/cp.6713702472441220258"}
+[debug] [2025-03-10T16:27:04.950Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-03-10T16:27:04.950Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:27:04.950Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:27:04.950Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6713702472441220258 [none]
+[debug] [2025-03-10T16:27:05.368Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6713702472441220258 200
+[debug] [2025-03-10T16:27:05.368Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.6713702472441220258 {"name":"operations/cp.6713702472441220258","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"1093455981997","projectId":"aboulocation-app","lifecycleState":"ACTIVE","name":"aboulocation-app","createTime":"2025-03-10T16:27:03.693776Z"}}
+[debug] [2025-03-10T16:27:05.369Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:27:05.369Z] Checked if tokens are valid: true, expires at: 1741626982256
+[debug] [2025-03-10T16:27:05.370Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/aboulocation-app:addFirebase [none]
+[debug] [2025-03-10T16:27:06.638Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/aboulocation-app:addFirebase 403
+[debug] [2025-03-10T16:27:06.638Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/aboulocation-app:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-03-10T16:27:06.639Z] Request to https://firebase.googleapis.com/v1beta1/projects/aboulocation-app:addFirebase had HTTP Error: 403, The caller does not have permission
+[debug] [2025-03-10T16:27:11.652Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\boubo\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:269:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
